@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Noto+Serif+Display:wght@400;500;600;700;800;900&display=swap");
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.219);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.219);
+}
+
+.hero {
+  background: #261c15 url("../assets/heroN.png") no-repeat fixed center/cover;
+  min-height: 100vh;
+}
+
+.hero-content {
+  padding-top: 10vh;
+  min-height: 100vh;
+}
+
+.caption {
+  font-family: "Noto Serif Display", serif;
+  font-size: 3.8em;
+  font-weight: 800;
+  width: 30vw;
+  color: rgb(235, 222, 222);
+}
+
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgb(212, 212, 212);
+}
+
+.order-now {
+  color: rgb(212, 212, 212);
+  background-color: #e9551b;
+  font-weight: 700;
+  font-size: 1.2em;
+  max-width: 20vw;
+}
+
+.order-now:hover {
+  color: rgb(212, 212, 212);
+  background-color: #eb6b39;
+}
