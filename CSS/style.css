@@ -42,3 +42,22 @@
   color: rgb(212, 212, 212);
   background-color: #eb6b39;
 }
+
+h2::first-letter {
+  color: #e9551b;
+}
+
+.services h2:first-of-type {
+  padding-bottom: 5vh;
+}
+
+.services {
+  padding-top: 18vh;
+  padding-bottom: 18vh;
+}
+
+.services-content {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  cursor: pointer;
+}
