@@ -11,16 +11,15 @@
 }
 
 .hero-content {
-  padding-top: 10vh;
   min-height: 100vh;
 }
 
 .caption {
   font-family: "Noto Serif Display", serif;
-  font-size: 3.8em;
+  font-size: 3.7em;
   font-weight: 800;
-  width: 30vw;
   color: rgb(235, 222, 222);
+  width: 30vw;
 }
 
 .navbar-brand {
@@ -51,13 +50,26 @@ h2::first-letter {
   padding-bottom: 5vh;
 }
 
-.services {
-  padding-top: 18vh;
-  padding-bottom: 18vh;
+section {
+  padding-top: 11vh;
+  padding-bottom: 11vh;
 }
 
 .services-content {
   padding-top: 5vh;
   padding-bottom: 5vh;
   cursor: pointer;
+}
+
+.menu {
+  background: #e4e6c3 url("../assets/bgMenu.jpg") no-repeat fixed center/cover;
+  min-height: 100vh;
+}
+
+.table {
+  max-width: 30em;
+  padding: 3em;
+  color: #ffffff;
+  border-color: #f59999;
+  font-family: "Dancing Script", cursive;
 }
