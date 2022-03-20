@@ -34,10 +34,17 @@ $(document).ready(function () {
 
     let validateChoice = (userChoices) => {
       userChoices.map((choice) => {
-        if (choice == "") {
+        if (choice == "" || choice == "0") {
           isValid = false;
         }
       });
+      errorReport(isValid);
+    };
+
+    let errorReport = (isValid) => {
+      if (!isValid) {
+        $(".modal-body").append("Kindly fill all Sections.");
+      }
     };
 
     getChoice(menuChoice);
