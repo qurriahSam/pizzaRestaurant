@@ -112,22 +112,22 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th scope="col" class="text-uppercase fw-bolder fs-5">toppings</th>
+                  <th scope="col" class="text-uppercase fw-bolder fs-5">size</th>
                   <th scope="col" class="text-uppercase fw-bolder fs-5">price</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td scope="row" class="text-uppercase fw-bolder fs-5">Pineapples</td>
-                  <td>100Ksh</td>
+                  <td scope="row" class="text-uppercase fw-bolder fs-5">small</td>
+                  <td>600Ksh</td>
                 </tr>
                 <tr>
-                  <td scope="row" class="text-uppercase fw-bolder fs-5">Cheese</td>
-                  <td>200Ksh</td>
+                  <td scope="row" class="text-uppercase fw-bolder fs-5">medium</td>
+                  <td>1000Ksh</td>
                 </tr>
                 <tr>
-                  <td scope="row" class="text-uppercase fw-bolder fs-5">Pepperoni</td>
-                  <td>300Ksh</td>
+                  <td scope="row" class="text-uppercase fw-bolder fs-5">large</td>
+                  <td>1200Ksh</td>
                 </tr>
               </tbody>
             </table>
@@ -162,22 +162,22 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col" class="text-uppercase fw-bolder fs-5">toppings</th>
+              <th scope="col" class="text-uppercase fw-bolder fs-5">crust</th>
               <th scope="col" class="text-uppercase fw-bolder fs-5">price</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td scope="row" class="text-uppercase fw-bolder fs-5">Pineapples</td>
-              <td>100Ksh</td>
-            </tr>
-            <tr>
-              <td scope="row" class="text-uppercase fw-bolder fs-5">Cheese</td>
+              <td scope="row" class="text-uppercase fw-bolder fs-5">stuffed</td>
               <td>200Ksh</td>
             </tr>
             <tr>
-              <td scope="row" class="text-uppercase fw-bolder fs-5">Pepperoni</td>
+              <td scope="row" class="text-uppercase fw-bolder fs-5">glutten-free</td>
               <td>300Ksh</td>
+            </tr>
+            <tr>
+              <td scope="row" class="text-uppercase fw-bolder fs-5">crispy</td>
+              <td>400Ksh</td>
             </tr>
           </tbody>
         </table>
@@ -187,32 +187,36 @@
       <h2 class="text-capitalize fw-bold fs-1 text-center">Order now</h2>
       <div class="container">
         <form action="#">
-          <select class="form-select my-5 shadow" aria-label="size">
-            <option selected>Size...</option>
+          <select id="sizeSelect" class="form-select my-5 shadow" aria-label="size">
+            <option value="" selected>Size...</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
           </select>
-          <select class="form-select my-5 shadow" aria-label="size">
-            <option selected>Toppings...</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+          <select id="toppingsSelect" class="form-select my-5 shadow" aria-label="size">
+            <option value="" selected>Toppings...</option>
+            <option value="pineapples">Pineapples</option>
+            <option value="cheese">Cheese</option>
+            <option value="peperoni">Peperoni</option>
           </select>
-          <select class="form-select my-5 shadow" aria-label="size">
-            <option selected>Crust...</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+          <select id="crustSelect" class="form-select my-5 shadow" aria-label="size">
+            <option value="" selected>Crust...</option>
+            <option value="stuffed">stuffed</option>
+            <option value="gluttenFree">glutten-free</option>
+            <option value="crispy">crispy</option>
           </select>
           <input
             class="form-control my-5 shadow"
             type="number"
             name="quantity"
-            id="quantity"
+            id="quantitySelect"
             placeholder="Amount"
           />
-          <button type="submit" class="btn btn-primary place-order rounded-pill p-2 px-4 shadow">
+          <button
+            id="orderSubmit"
+            type="submit"
+            class="btn btn-primary place-order rounded-pill p-2 px-4 shadow"
+          >
             Place Order
           </button>
         </form>
