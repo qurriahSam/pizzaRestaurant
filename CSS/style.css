@@ -70,7 +70,7 @@ section {
 }
 
 .orders {
-  background: #e4e6c3 url("../assets/bgOrder.png") no-repeat center/cover;
+  background: url("../assets/bgOrder.png") no-repeat center/cover;
   height: 100vh;
 }
 
