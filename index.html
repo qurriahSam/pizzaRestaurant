@@ -183,6 +183,41 @@
         </table>
       </div>
     </section>
+    <section class="orders">
+      <h2 class="text-capitalize fw-bold fs-1 text-center">Order now</h2>
+      <div class="container">
+        <form action="#">
+          <select class="form-select my-5 shadow" aria-label="size">
+            <option selected>Size...</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <select class="form-select my-5 shadow" aria-label="size">
+            <option selected>Toppings...</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <select class="form-select my-5 shadow" aria-label="size">
+            <option selected>Crust...</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <input
+            class="form-control my-5 shadow"
+            type="number"
+            name="quantity"
+            id="quantity"
+            placeholder="Amount"
+          />
+          <button type="submit" class="btn btn-primary place-order rounded-pill p-2 px-4 shadow">
+            Place Order
+          </button>
+        </form>
+      </div>
+    </section>
   </body>
   <script src="https://kit.fontawesome.com/8ff7c2670f.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
