@@ -6,11 +6,7 @@
 }
 
 .hero {
-  background: #261c15 url("../assets/heroN.png") no-repeat fixed center/cover;
-  min-height: 100vh;
-}
-
-.hero-content {
+  background: #261c15 url("../assets/heroN.png") no-repeat center/cover;
   min-height: 100vh;
 }
 
@@ -52,7 +48,6 @@ h2::first-letter {
 
 section {
   padding-top: 11vh;
-  padding-bottom: 11vh;
 }
 
 .services-content {
@@ -62,7 +57,7 @@ section {
 }
 
 .menu {
-  background: #e4e6c3 url("../assets/bgMenu.jpg") no-repeat fixed center/cover;
+  background: #261c15 url("../assets/bgMenu.jpg") no-repeat fixed center/cover;
   min-height: 100vh;
 }
 
@@ -72,4 +67,31 @@ section {
   color: #ffffff;
   border-color: #f59999;
   font-family: "Dancing Script", cursive;
+}
+
+.orders {
+  background: #e4e6c3 url("../assets/bgOrder.png") no-repeat center/cover;
+  height: 100vh;
+}
+
+.orders form {
+  width: 40vw;
+}
+
+.orders .form-select {
+  border-color: #e9551b;
+}
+
+.orders input {
+  width: 20vw;
+  border-color: #e9551b;
+}
+
+.place-order {
+  background-color: #e9551b;
+  border: none;
+}
+
+.place-order:hover {
+  background-color: #eb6b39;
 }
