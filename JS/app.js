@@ -116,7 +116,5 @@ $(document).ready(function () {
     $(".toppingsOut").remove();
     $(".crustOut").remove();
     $(".amountOut").remove();
-    $("#totalOut").remove();
-    total = 0;
   });
 });
