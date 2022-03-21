@@ -187,37 +187,43 @@
       <h2 class="text-capitalize fw-bold fs-1 text-center">Order now</h2>
       <div class="container">
         <form action="#">
-          <select id="sizeSelect" class="form-select my-5 shadow" aria-label="size">
+          <select id="sizeSelect" class="form-select my-4shadow" aria-label="size">
             <option value="" selected>Size...</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
           </select>
-          <select id="toppingsSelect" class="form-select my-5 shadow" aria-label="size">
+          <select id="toppingsSelect" class="form-select my-4 shadow" aria-label="size">
             <option value="" selected>Toppings...</option>
             <option value="pineapples">Pineapples</option>
             <option value="cheese">Cheese</option>
             <option value="peperoni">Peperoni</option>
           </select>
-          <select id="crustSelect" class="form-select my-5 shadow" aria-label="size">
+          <select id="crustSelect" class="form-select my-4 shadow" aria-label="size">
             <option value="" selected>Crust...</option>
             <option value="stuffed">stuffed</option>
             <option value="gluttenFree">glutten-free</option>
             <option value="crispy">crispy</option>
           </select>
           <input
-            class="form-control my-5 shadow"
+            class="count form-control my-4shadow"
             type="number"
             name="quantity"
             id="quantitySelect"
             placeholder="Amount"
           />
+          <div class="form-check my-4">
+            <input class="form-check-input" type="checkbox" value="" id="delivery" />
+            <label class="form-check-label" for="delivery">Select for Delivery</label>
+          </div>
+          <div id="locationContainer" class="input-group my-4">
+            <span class="input-group-text">Enter Location</span>
+            <textarea class="form-control" aria-label="location"></textarea>
+          </div>
           <button
             id="orderSubmit"
             type="submit"
             class="btn btn-primary place-order rounded-pill p-2 px-4 shadow"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
           >
             Place Order
           </button>
@@ -225,35 +231,23 @@
       </div>
     </section>
     <section class="checkout">
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel"></h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p id="message"></p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <!-- <button type="button" class="btn btn-primary">Understood</button> -->
-            </div>
-          </div>
-        </div>
+      <div class="container">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Size</th>
+              <th scope="col">Toppings</th>
+              <th scope="col">Crust</th>
+              <th scope="col">How many</th>
+            </tr>
+          </thead>
+          <tbody id="orders">
+            <tr>
+              <td>Total</td>
+              <td id="totalOut"></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </body>
