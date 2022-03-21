@@ -21,6 +21,14 @@ $(document).ready(function () {
     });
   });
 
+  $("#deliveryCheck").change((e) => {
+    if (e.target.checked) {
+      $("#locationContainer").slideDown();
+    } else {
+      $("#locationContainer").slideUp();
+    }
+  });
+
   $("#orderSubmit").click(function (e) {
     e.preventDefault();
     let userChoices = [];
@@ -55,6 +63,7 @@ $(document).ready(function () {
         alert("Kindly fill all Sections.");
       } else {
         getTotal(userChoices);
+        $("#checkout").slideDown();
       }
     };
 
@@ -64,9 +73,8 @@ $(document).ready(function () {
         tots += prices[choicesArr[i]];
       }
       total += tots * parseInt(choicesArr[3]);
+      outputOrder(userChoices, total);
     };
-
-    getChoice(menuChoice);
 
     let outputOrder = (choicesArr, total) => {
       let [size, toppings, crust, amount] = choicesArr;
@@ -84,7 +92,25 @@ $(document).ready(function () {
       $("#totalOut").text(total.toString());
     };
 
-    outputOrder(userChoices, total);
-    console.log(total);
+    getChoice(menuChoice);
+  });
+
+  $("#orderCheckout").click((e) => {
+    e.preventDefault();
+    let location = $("#userLocation").val();
+
+    let resetter = (menuChoice) => {
+      menuChoice.map((choice) => {
+        $(`#${choice}Select`).val("");
+      });
+    };
+
+    if (location.length > 2) {
+      alert(`Your order will be delivered to ${location}`);
+    } else {
+      alert("Your order is being prepared");
+    }
+    $("#checkout").slideUp();
+    resetter(menuChoice);
   });
 });
