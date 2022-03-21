@@ -12,6 +12,7 @@ $(document).ready(function () {
     gluttenFree: 300,
     crispy: 400,
   };
+  let total = 0;
 
   services.map((elem) => {
     $(`#${elem}`).click(function () {
@@ -24,14 +25,13 @@ $(document).ready(function () {
     e.preventDefault();
     let userChoices = [];
     let isValid = true;
-    let total = 0;
 
-    function Receipt(price, crust, toppings, size, amount) {
-      this.price = price;
+    function Receipt(amount, crust, toppings, size, total) {
+      this.amount = amount;
       this.crust = crust;
       this.toppings = toppings;
       this.size = size;
-      this.amount = amount;
+      this.total = total;
     }
 
     let getChoice = (menuChoice) => {
@@ -52,7 +52,7 @@ $(document).ready(function () {
 
     let errorReport = (isValid) => {
       if (!isValid) {
-        $("#message").text("Kindly fill all Sections.");
+        alert("Kindly fill all Sections.");
       } else {
         getTotal(userChoices);
       }
@@ -63,14 +63,28 @@ $(document).ready(function () {
       for (let i = 0; i < choicesArr.length - 1; i++) {
         tots += prices[choicesArr[i]];
       }
-      total = tots * parseInt(choicesArr[3]);
+      total += tots * parseInt(choicesArr[3]);
     };
+
     getChoice(menuChoice);
 
-    let [size, toppings, crust, amount] = userChoices;
+    let outputOrder = (choicesArr, total) => {
+      let [size, toppings, crust, amount] = choicesArr;
+      let order = new Receipt(amount, crust, toppings, size, total);
 
-    console.log(size, toppings, crust, amount);
+      $("#orders").prepend(`
+            <tr >
+              <td class="sizeOut"> ${order.size} </td>
+              <td class="toppingsOut"> ${order.toppings} </td>
+              <td class="crustOut"> ${order.crust} </td>
+              <td class="amountOut"> ${order.amount} </td>
+            </tr>
+      `);
 
+      console.log(order);
+    };
+
+    outputOrder(userChoices, total);
     console.log(total);
   });
 });
