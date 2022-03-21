@@ -49,7 +49,9 @@
     <section class="hero">
       <div class="container hero-content d-flex flex-column">
         <p class="caption">Serving great pizza from our family to yours.</p>
-        <button class="order-now btn btn-primary rounded-pill p-3 px-4 mb-4 border-secondary">
+        <button
+          class="order-now btn rounded-pill p-3 px-4 mb-4 border-secondary text-light fw-bold"
+        >
           Order Now
         </button>
       </div>
@@ -184,70 +186,85 @@
       </div>
     </section>
     <section class="orders">
-      <h2 class="text-capitalize fw-bold fs-1 text-center">Order now</h2>
+      <h2 class="text-capitalize fw-bold fs-1 text-center my-md-5">Order now</h2>
       <div class="container">
-        <form action="#">
-          <select id="sizeSelect" class="form-select my-4shadow" aria-label="size">
-            <option value="" selected>Size...</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-          <select id="toppingsSelect" class="form-select my-4 shadow" aria-label="size">
-            <option value="" selected>Toppings...</option>
-            <option value="pineapples">Pineapples</option>
-            <option value="cheese">Cheese</option>
-            <option value="peperoni">Peperoni</option>
-          </select>
-          <select id="crustSelect" class="form-select my-4 shadow" aria-label="size">
-            <option value="" selected>Crust...</option>
-            <option value="stuffed">stuffed</option>
-            <option value="gluttenFree">glutten-free</option>
-            <option value="crispy">crispy</option>
-          </select>
-          <input
-            class="count form-control my-4shadow"
-            type="number"
-            name="quantity"
-            id="quantitySelect"
-            placeholder="Amount"
-          />
-          <div class="form-check my-4">
-            <input class="form-check-input" type="checkbox" value="" id="delivery" />
-            <label class="form-check-label" for="delivery">Select for Delivery</label>
+        <div class="row">
+          <div class="col p-4">
+            <form action="#">
+              <select id="sizeSelect" class="form-select my-4 shadow" aria-label="size">
+                <option value="" selected>Size...</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+              <select id="toppingsSelect" class="form-select my-4 shadow" aria-label="size">
+                <option value="" selected>Toppings...</option>
+                <option value="pineapples">Pineapples</option>
+                <option value="cheese">Cheese</option>
+                <option value="peperoni">Peperoni</option>
+              </select>
+              <select id="crustSelect" class="form-select my-4 shadow" aria-label="size">
+                <option value="" selected>Crust...</option>
+                <option value="stuffed">stuffed</option>
+                <option value="gluttenFree">glutten-free</option>
+                <option value="crispy">crispy</option>
+              </select>
+              <input
+                class="count form-control my-4 shadow"
+                type="number"
+                name="quantity"
+                id="quantitySelect"
+                placeholder="Amount"
+              />
+              <button
+                id="orderSubmit"
+                type="submit"
+                class="btn place-order rounded-pill p-2 px-4 shadow text-light fw-bold"
+              >
+                Place Order
+              </button>
+            </form>
           </div>
-          <div id="locationContainer" class="input-group my-4">
-            <span class="input-group-text">Enter Location</span>
-            <textarea class="form-control" aria-label="location"></textarea>
+          <div id="checkout" class="col p-4 hide">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Size</th>
+                  <th scope="col">Toppings</th>
+                  <th scope="col">Crust</th>
+                  <th scope="col">How many</th>
+                </tr>
+              </thead>
+              <tbody id="orders">
+                <tr>
+                  <td>Total</td>
+                  <td id="totalOut"></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="form-check my-4">
+              <input class="form-check-input" type="checkbox" value="" id="deliveryCheck" />
+              <label class="form-check-label" for="delivery">Select for Delivery</label>
+            </div>
+            <div id="locationContainer" class="my-4 hide">
+              <p>An additional fee of 1200Ksh will be added.</p>
+
+              <textarea
+                class="form-control"
+                id="userLocation"
+                rows="1"
+                placeholder="Enter Location..."
+              ></textarea>
+            </div>
+            <button
+              id="orderCheckout"
+              type="submit"
+              class="btn place-order rounded-pill p-2 px-4 shadow text-light fw-bold"
+            >
+              Checkout
+            </button>
           </div>
-          <button
-            id="orderSubmit"
-            type="submit"
-            class="btn btn-primary place-order rounded-pill p-2 px-4 shadow"
-          >
-            Place Order
-          </button>
-        </form>
-      </div>
-    </section>
-    <section class="checkout">
-      <div class="container">
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Size</th>
-              <th scope="col">Toppings</th>
-              <th scope="col">Crust</th>
-              <th scope="col">How many</th>
-            </tr>
-          </thead>
-          <tbody id="orders">
-            <tr>
-              <td>Total</td>
-              <td id="totalOut"></td>
-            </tr>
-          </tbody>
-        </table>
+        </div>
       </div>
     </section>
   </body>
