@@ -49,7 +49,7 @@ On your computer open terminal and run:
 
 ## Links
 
-- Live Site URL: [L’ultimo_Spicchio](https://qurriahsam.github.io/delaniStudio/)
+- Live Site URL: [L’ultimo_Spicchio](https://qurriahsam.github.io/pizzaRestaurant/)
 
 [Go Back to the top](#L’ultimo_Spicchio)
 
