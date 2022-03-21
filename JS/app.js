@@ -81,7 +81,7 @@ $(document).ready(function () {
             </tr>
       `);
 
-      console.log(order);
+      $("#totalOut").text(total.toString());
     };
 
     outputOrder(userChoices, total);
