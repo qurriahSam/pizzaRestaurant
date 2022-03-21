@@ -112,5 +112,11 @@ $(document).ready(function () {
     }
     $("#checkout").slideUp();
     resetter(menuChoice);
+    $(".sizeOut").remove();
+    $(".toppingsOut").remove();
+    $(".crustOut").remove();
+    $(".amountOut").remove();
+    $("#totalOut").remove();
+    total = 0;
   });
 });
