@@ -61,7 +61,7 @@ section {
   min-height: 100vh;
 }
 
-.table {
+.menu .table {
   max-width: 30em;
   padding: 3em;
   color: #ffffff;
@@ -82,7 +82,7 @@ section {
   border-color: #e9551b;
 }
 
-.orders input {
+.orders .count {
   width: 20vw;
   border-color: #e9551b;
 }
@@ -94,4 +94,8 @@ section {
 
 .place-order:hover {
   background-color: #eb6b39;
+}
+
+.hide {
+  display: none;
 }
