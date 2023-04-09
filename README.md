@@ -11,7 +11,7 @@
 
 ## Description
 
-This is a web application for a pizza Restaurant.
+L'ultimo_Spicchio is an online pizza ordering platform that provides users with a convenient and efficient means of placing their pizza orders and specifying their desired delivery locations. The website boasts a user-friendly interface, allowing customers to easily browse through an extensive menu of delectable pizzas and select their desired toppings, sizes, and quantities.
 
 ## Screenshot
 
